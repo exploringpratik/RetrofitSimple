@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
 
         try {
             ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-            Call<List<PlaceList>> call = apiInterface.getPlaceLists();
+            Call<List<PlaceList>> call = apiInterface.getPlaceLists( "api","trekking");
             call.enqueue(new Callback<List<PlaceList>>() {
                 @Override
                 public void onResponse(Call<List<PlaceList>> call, Response<List<PlaceList>> response) {
